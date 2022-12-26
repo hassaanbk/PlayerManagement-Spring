@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Players</title>
+</head>
+<body>
+<table>
+        <thead>
+         <tr>
+           <th>Player ID</th>
+           <th>Player Name</th>
+           <th>Country</th>
+           <th>Player Age</th>
+           <th>Height</th>
+           <th>Foot</th>
+           <th>Weekly Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="player:${players}">
+             <td th:text="${player.playerId}">Player ID</td>
+             <td th:text="${player.playerName}">Player Name</td>
+             <td th:text="${player.country}">Country</td> 
+             <td th:text="${player.playerAge}">Player Age</td>
+             <td th:text="${player.height}">Height</td>
+             <td th:text="${player.foot}">Foot</td>
+             <td th:text="${player.weeklySalary}">Weekly Salary</td>
+          </tr>
+        </tbody>
+    </table>
+    
+    <p><a href="/player">Add a new Player</a></p>
+    <form action="exists" method="POST">
+		<label for="playerID">Find by Player ID</label>
+		<input type="number" name="playerID">
+		<input type="submit" value="Check"/>
+	</form>
+</body>
+</html>

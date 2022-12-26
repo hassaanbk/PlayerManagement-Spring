@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Player</title>
+</head>
+<body>
+    <form action="#" th:action="@{/add}" th:object="${player}" method="post">
+    
+    <label for="playerName">Player Name</label>
+    <input type="text" th:field="*{playerName}" id="playerName" placeholder="Player Name">
+    <span th:if="${#fields.hasErrors('playerName')}" th:errors="*{playerName}"></span>
+    </br>
+    <label for="country">Country</label>
+    <input type="text" th:field="*{country}" id="country" placeholder="Country">
+    <span th:if="${#fields.hasErrors('country')}" th:errors="*{country}"></span>
+    </br>
+    <label for="playerAge">Player Age</label>
+    <input type="text" th:field="*{playerAge}" id="playerAge">
+    <span th:if="${#fields.hasErrors('playerAge')}" th:errors="*{playerAge}"></span>
+    </br>
+    <label for="height">Height</label>
+    <input type="number" step="1.0" th:field="*{height}" id="height" placeholder="Height">
+    <span th:if="${#fields.hasErrors('height')}" th:errors="*{height}"></span>
+    </br>
+    <label for="foot">Foot</label>
+    <input type="text" th:field="*{foot}" id="foot" placeholder="Foot">
+    <span th:if="${#fields.hasErrors('playerName')}" th:errors="*{playerName}"></span>
+    </br>
+    <label for="weeklySalary">Weekly Salary</label>
+    <input type="text" th:field="*{weeklySalary}" id="weeklySalary" placeholder="Weekly Salary">
+    <span th:if="${#fields.hasErrors('weeklySalary')}" th:errors="*{weeklySalary}"></span>
+    </br>
+    <input type="submit" value="Add Player">
+</form> 
+</body>
+</html>

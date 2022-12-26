@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Player</title>
+</head>
+<body>
+    <label for="playerId">Player ID: </label>
+    <label th:text="${player.getPlayerId()}"></label>
+    </br>
+    <label for="playerName">Player Name: </label>
+    <label th:text="${player.playerName}"></label>
+    </br>
+    <label for="country">Country: </label>
+    <label th:text="${player.country}"></label>
+    
+    </br>
+    <label for="playerAge">Player Age: </label>
+    <label th:text="${player.playerAge}"></label>
+    
+    </br>
+    <label for="height">Height</label>
+    <label th:text="${player.height}"></label>
+    
+    </br>
+    <label for="foot">Foot</label>
+    <label th:text="${player.foot}"></label>
+    
+    </br>
+    <label for="weeklySalary">Weekly Salary</label>
+    <label th:text="${player.weeklySalary}"></label>
+    
+    </br>
+</body>
+</html>
